@@ -1,0 +1,13 @@
+
+int sansaXor(vector<int>& arr) {
+    int n = arr.size();
+    int result = 0;
+
+    // If n is odd, only elements at even indices (0,2,4,...) contribute
+    if (n % 2 != 0) {
+        for (int i = 0; i < n; i += 2) {
+            result ^= arr[i];
+        }
+    }
+    return result;
+}
